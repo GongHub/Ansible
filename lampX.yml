@@ -12,7 +12,7 @@
     when: ansible_os_family == "RedHat"
   - name: download webpage
     get_url: 
-      url: https://github.com/GongHub/Ansible/blob/master/info.php
+      url: https://github.com/GongHub/Ansible/blob/examples/info.php
       dest: /var/www/html/info.php
     notify: 
       - restart httpd
