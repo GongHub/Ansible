@@ -1,0 +1,25 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Update package and install httpd
+    yum:
+      name: httpd
+      update_cache: yes
+      state: present
+    notify: restart httpd
+  - name: install php
+    yum:
+      name: "{{ packages }}"
+      vars:
+        packages:
+        - php
+        - php-mysql
+      state: present
+    notify: restart httpd
+  handlers:
+  - name: restart httpd
+    service:
+      name: httpd
+      enabled: yes
+      state: restarted

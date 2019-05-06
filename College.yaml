@@ -1,0 +1,12 @@
+NAME: 
+Departments:
+ - NAME: CSE
+   StdCount: 30
+   Faculty: SR 
+ - NAME: ECE
+   StdCount: 30
+   Faculty: SR 
+ - NAME: EEE
+   StdCount: 30
+   Faculty: SR
+Achievements: 
